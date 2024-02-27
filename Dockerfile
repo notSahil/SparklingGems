@@ -1,5 +1,5 @@
 # Use an official Node runtime as the base image
-FROM node:20-alpine
+FROM node:14-alpine
  
 # Set the working directory in the container
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
  
 # Install dependencies
-RUN npm install 
+RUN npm install
  
 # Copy the entire application code to the working directory
 COPY . .
  
 # Build the React app
-RUN npm start
+RUN npm run build
  
 # Expose port 3000 to the outside world (or any other port you want to use)
 EXPOSE 3000
