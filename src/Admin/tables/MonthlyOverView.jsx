@@ -28,7 +28,7 @@ const MonthlyOverview = () => {
   useEffect(() => {
     const fetchProductCount = async () => {
       try {
-        const response = await fetch(`${API_BASE_URLURL}/api/products/all`);
+        const response = await fetch(`${API_BASE_URL}/api/products/all`);
         if (!response.ok) {
           throw new Error('Failed to fetch product data');
         }
